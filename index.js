@@ -29,20 +29,47 @@ const nestedMuppet = {
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
 
+
+//let farmAnimalsArray = farmAnimals.split(" ")
+
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(" ")
+
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
 
+const farmAnimalsArray = farmAnimals.split(" ")
+const arrayForProb2 = [farmAnimalsArray[0], ...farmAnimalsArray.slice(2)]
+const [bessie, dolly, babe, little] = [farmAnimalsArray[0], ...farmAnimalsArray.slice(2)]
+
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
+
+const arrayForProb3 = [...arrayForProb2.slice(0,3)]
+const [blackAndWhite, black, pink] = arrayForProb3
 
 // Arrays
 
 // 4. Use destructuring to assign appropriate variables using the color names.
 
+const [red, orange, yellow, green, blue, indigo, violet] = colors 
+
 // 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
 
+//const arrayForProb5 = [...colors.slice(0, 4), colors.slice(6)]
+const [r, o ,y , g, b, v] = [...colors.slice(0, 5), colors[6]]
+//console.log(arrayForProb5)
+//console.log(r,o,y,g,b,v) 
+
 // 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
+
+const indg = colors[5]
 
 // Objects
 
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
+const {muppetName, color, song, job, partner} = muppet 
+
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+const {song2, song4} = nestedMuppet.album.theMuppetMovie
+
+const {nestedJob, nestedPartner} = nestedMuppet
